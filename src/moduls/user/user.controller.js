@@ -10,7 +10,7 @@ import * as validators from "../user/user.validation.js";
 import { validation } from "../../middelware/validation.middelware.js";
 import { endpoint } from "./user.authorization.js";
 import {
-  cloudFileUploud,
+  cloudFileupload,
   fileValidation,
 } from "../../utils/multer/cloud.multer.js";
 const router = Router({ caseSensitive: true, strict: true });
@@ -25,7 +25,7 @@ router.get(
 router.patch(
   "/profile-image",
   authentication(),
-  cloudFileUploud({
+  cloudFileupload({
     validation: fileValidation.image,
   }).single("image"),
   userService.profileImage,
@@ -34,7 +34,7 @@ router.patch(
 router.patch(
   "/profile-cover-image",
   authentication(),
-  cloudFileUploud({
+  cloudFileupload({
     validation: fileValidation.image,
   }).array("images", 2),
   validation(validators.coverImages),

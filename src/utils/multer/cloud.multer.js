@@ -4,7 +4,8 @@ export const fileValidation = {
   image: ["image/jpeg", "image/jpg", "image/png"],
   document: ["application/pdf", "application/msword"],
 };
-export const cloudFileUploud = ({ validation = [] } = {}) => {
+
+export const cloudFileUpload = ({ validation = [] } = {}) => {
   const storage = multer.diskStorage({});
 
   const fileFilter = function (req, file, callback) {

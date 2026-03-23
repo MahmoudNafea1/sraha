@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv";
-dotenv.config({});
-// dotenv.config({ path: path.join("./src/config/.env.dev") });
+// dotenv.config({});
+dotenv.config({ path: path.join("./src/config/.env.dev") });
 import path from "node:path";
 import express from "express";
 import authController from "./moduls/auth/auth.controller.js";
