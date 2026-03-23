@@ -41,7 +41,3 @@ A high-security, scalable RESTful API built with **Node.js** and **Express.js**.
 ## 🚀 Deployment
 
 Successfully deployed on **AWS (EC2)** using **PM2** for process management, ensuring 24/7 availability and zero-downtime.
-
----
-
-Developed by **Mahmoud Nafea** ```
